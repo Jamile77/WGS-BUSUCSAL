@@ -12,148 +12,152 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <style type="text/css">
-body{
-    font: 400 14px Roboto, sans-serif;
-    background: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
+	;
+
+@font-face {
+	font-family: Quicksand;
+	src: url(./assets/fonts/Quicksand_Bold.otf);
+	font-style: normal;
+	font-weight: 600;
 }
 
-hr{
-    border: 1px solid;
-    color: #707070;
+body {
+	font: 400 14px Quicksand, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
-p{
-    font-size: 20px;
-    color: #4A3969;
+hr {
+	border: 1px solid;
+	color: #707070;
 }
 
-.title{
-	margin-top: 50px;
-    width: 2px;
-    height: 40px;
-
-    display: flex;
-    margin-left: 33%;
-    margin-right: auto;
+p {
+	font-size: 17px;
+	color: #4A3969;
 }
 
-.title h1{
-    font-size: 80px;
-    font-weight: 300;
-    color: #2B94EE;
-    margin-top: 30px;
+.title {
+	font-size: 44px;
+	font-weight: 300;
+	color: #2B94EE;
+	margin-bottom: 60px;
+	width: 2px;
+	height: 100px;
+	display: flex;
+	margin-left: 33%;
+	margin-right: auto;
 }
 
-.header{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #4A3969;
+.content {
+	display: inline;
+	justify-content: space-around;
 }
+
+.header {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #4A3969;
+}
+
 .header .welcome {
-    align-items: center;
-    display: flex;
-    font-size: 15PX;
+	align-items: center;
+	display: flex;
+	font-size: 15PX;
 }
 
-.logout{
-    margin-right: 13px;
-    background: #4A3969;
-    color: white;
-    width: 170px;
-    height: 63px;
-    border: none;
-    border-radius: 10px;
-    font-size: 23px;
-    font-weight: bold;
+.logout {
+	margin-right: 13px;
+	background: #4A3969;
+	color: white;
+	width: 140px;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: normal;
 }
 
 .linha-vertical {
-    height: 700px;
-    border-left: 5px solid;
-    color: #707070;
-  }
+	height: 650px;
+	border-left: 5px solid;
+	color: #707070;
+	margin-right: 20px;
+	margin-bottom: -100px;
+}
 
-.iterary-container{
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.iterary-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
 }
 
 .iterary-container section {
-    text-align: left;
-    width: 900px;
-    margin-right: 30px;
-    margin-top: 600px;
+	align-self: baseline;
+	text-align: left;
+	width: 900px;
+	margin-right: 30px;
 }
 
-.avisos{
-    text-align: left;
-    height: 800px;
-    width: 900px;
-    margin-right: 30px;
+.avisos {
+	text-align: left;
+	height: 900px;
+	width: 900px;
+	margin-right: 30px;
 }
 
-.title-section{
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
+.title-section {
+	font-size: 50px;
+	font-weight: 300;
+	text-align: center;
 }
 
-.sub-title{
-    font-size: 30px;
-    color: #4A3969;
-    font-weight: bold;
-    margin-bottom: 0;
+.sub-title {
+	font-size: 25px;
+	color: #4A3969;
+	font-weight: bold;
+	margin-bottom: 0;
 }
 
-.mural{
-    padding-top: 18px;
-    height: 650px;
-    border: solid 15px;
-    border-color: #3E3E3E;
-    border-radius: 18px;
+.mural {
+	padding-top: 18px;
+	height: 550px;
+	border: solid 15px;
+	border-color: #3E3E3E;
+	border-radius: 18px;
 }
 
-.proximo-onibus{
-    font-size: 20px;
-    display: flex;
-    justify-content: space-evenly;
+.proximo-onibus {
+	font-size: 15px;
+	display: flex;
+	justify-content: space-around;
 }
-
-.logo {
-    align-self: flex-start;
-    float: left;
-}
-
-
 </style>
+
+
 </head>
 
 <body>
 
 	<header class="header">
 		<div class="welcome">
-			<img class="logo" src="./assets/img/logoucsal.svg" alt="Ucsal">
-			<H1>
+			<img src="../assets/img/logoucsal.svg" alt="Ucsal">
+			<h2>
 				BEM VINDO,
-				<c:out value="${usuario.nomeUsuario}" />
-			</H1>
+				<c:out value="${usuario.nomeUsuario}"></c:out>
+			</h2>
 		</div>
-		<button type="button" class="../logout">LOGOUT</button>
+		<button type="button" class="logout" form="/logout">LOGOUT</button>
 	</header>
 
 	<div class="title">
 		<h1>ITINERÁRIOS</h1>
 	</div>
-
-
 	<div class="iterary-container">
 		<section>
 			<h1 class="title-section">ITINERÁRIO BUS-UCSAL</h1>
@@ -193,7 +197,7 @@ p{
 		</section>
 		<div class="linha-vertical"></div>
 		<section class="avisos">
-			<h1 class="title-section">Mural de Avisos</h1>
+			<h1 class="title-section">MURAL DE AVISOS</h1>
 			<div class="mural">
 				<div class="proximo-onibus">
 					<h1>PRÓXIMO BUSU A SAIR:</h1>
