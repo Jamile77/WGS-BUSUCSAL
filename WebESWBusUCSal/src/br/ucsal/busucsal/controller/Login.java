@@ -56,12 +56,12 @@ public class Login extends HttpServlet {
 		} else if(usuario.getPapelUsuario().equals(ADMIN)) {
 			System.out.println("Sou administrador");
 			request.getSession().setAttribute("usuario", usuario);
-			response.sendRedirect("./private/dashboard.jsp");
+			response.sendRedirect("./private/admin.jsp");
 			
 		}else if(usuario.getPapelUsuario().equals(COLAB)) {
 			System.out.println("Sou colaborador");
 			request.getSession().setAttribute("usuario", usuario);
-			response.sendRedirect("./private/dashboard.jsp");
+			response.sendRedirect("./private/colaborador.jsp");
 			
 		}else if(usuario.getPapelUsuario().equals(ALUNO)) {
 			System.out.println("Sou aluno");

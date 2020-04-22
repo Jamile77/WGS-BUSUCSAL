@@ -70,15 +70,11 @@ p {
 }
 
 .logout {
-	margin-right: 13px;
-	background: #4A3969;
-	color: white;
-	width: 140px;
-	height: 50px;
-	border: none;
-	border-radius: 10px;
+	margin-right: 50px;
+	color: #4A3969;
 	font-size: 18px;
-	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
 }
 
 .linha-vertical {
@@ -152,7 +148,7 @@ p {
 				<c:out value="${usuario.nomeUsuario}"></c:out>
 			</h2>
 		</div>
-		<button type="button" class="logout" form="/logout">LOGOUT</button>
+		<a class="logout" href="../logout">Sair</a>
 	</header>
 
 	<div class="title">

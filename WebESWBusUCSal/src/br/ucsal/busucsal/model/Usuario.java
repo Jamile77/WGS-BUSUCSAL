@@ -63,4 +63,12 @@ public class Usuario {
 	public void setPapelUsuario(String papelUsuario) {
 		this.papelUsuario = papelUsuario;
 	}
+
+	@Override
+	public String toString() {
+		return "Usuario [matricula=" + matricula + ", senhaUsuario=" + senhaUsuario + ", nomeUsuario=" + nomeUsuario
+				+ ", papelUsuario=" + papelUsuario + "]\n";
+	}
+	
+	
 }
